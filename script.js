@@ -25,6 +25,7 @@ new Sortable(lista,
       const nuevoOrdenIds = elementosOrdenados.map(elemento => elemento.dataset.id);
       const nuevoArrayOrdenado = nuevoOrdenIds.map(id => listaTareas.find(tarea => tarea.id === id)).filter(tarea => tarea !== undefined);
       listaTareas = nuevoArrayOrdenado;
+      console.log(nuevoArrayOrdenado);
     }
   }
 );
@@ -69,7 +70,7 @@ botonInput.onclick = () => {
       lista.innerHTML += `<div class="card ${clasePrioridad}" data-id=${tarea.id}> 
         <span class="texto-tarea">${textoInput.value}</span>
         <div class="acciones">
-            <button class="btnEdit" id=${tarea.nombre}><i class="fa-solid fa-pencil"></i></button>
+            <button class="btnEdit" id="${tarea.nombre}"><i class="fa-solid fa-pencil"></i></button>
             <button class="btnDelete" id=${tarea.id}><i class="fa-solid fa-trash"></i></button>
             </div>
         </div>`;
@@ -102,7 +103,7 @@ function renderizarTareas() {
     lista.innerHTML += `<div class="card ${clasePrioridad}" data-id=${tarea.id}> 
             <span class="texto-tarea">${tarea.nombre}</span>
             <div class="acciones">
-                <button class="btnEdit" id=${tarea.nombre}><i class="fa-solid fa-pencil"></i></button>
+                <button class="btnEdit" id="${tarea.nombre}"><i class="fa-solid fa-pencil"></i></button>
                 <button class="btnDelete" id=${tarea.id}><i class="fa-solid fa-trash"></i></button>
             </div>
         </div>`;
@@ -167,9 +168,11 @@ function editarTareas() {
         "Nueva prioridad: 1 - Alta / 2 - Media / 3 - Baja"
       );
 
+      /*
       if (prioridadActualizada === null){
         return;
       }
+      */
 
       while (
         prioridadActualizada != 1 &&
@@ -210,11 +213,12 @@ function editarTareas() {
 
           localStorage.setItem("listaTareas", JSON.stringify(listaTareas));
           lista.innerHTML = "";
-
+          
           renderizarTareas();
           eliminarTareas();
           editarTareas();
         } else {
+          console.log(listaTareas);
           alert("Tarea inexistente");
         }
       } else {

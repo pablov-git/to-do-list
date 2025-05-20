@@ -24,8 +24,8 @@
 }
 
 .acciones button {
-    align-self: flex-end; /* Alinear los botones a la derecha */
-    white-space: nowrap;  /* Evita que el botón se haga alto por texto interno */
+  align-self: flex-end; /* Alinear los botones a la derecha */
+  white-space: nowrap; /* Evita que el botón se haga alto por texto interno */
 }
 
 header {
@@ -76,8 +76,8 @@ section {
 }
 
 .texto-tarea {
-    word-break: break-word;
-    padding-left: 0.5rem;
+  word-break: break-word;
+  padding-left: 0.5rem;
 }
 
 main {
@@ -90,15 +90,16 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
-input, select {
+input,
+select {
   padding: 0.7rem;
   font-size: 1.2rem;
   border: 1px solid #ccc;
   border-radius: 8px;
-  box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
 }
 
 button {
@@ -127,7 +128,7 @@ button:hover {
 }
 
 .card {
-  box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .red-card {
@@ -142,16 +143,19 @@ button:hover {
   background-color: #d2f8d2;
 }
 
-
 /* Smartphone */
 
 @media screen and (max-width: 768px) {
   body {
-    padding: 1rem;
+    background-color: #f0f4f8;
+    color: #1e3a8a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Quicksand", sans-serif;
   }
 
   header,
-  footer,
   main,
   #lista {
     width: 100% !important;
@@ -159,9 +163,7 @@ button:hover {
   }
 
   footer {
-    margin-top: 2rem;
-    height: auto;
-    padding-bottom: 1rem;
+    width: 90%;
   }
 
   #lista {
@@ -192,13 +194,13 @@ button:hover {
     font-size: 1.4rem;
   }
 
-  .btnEdit{
-    width:50%;
+  .btnEdit {
+    width: 50%;
     padding: 1rem;
   }
 
-  .btnDelete{
-    width:50%;
+  .btnDelete {
+    width: 50%;
     padding: 1rem;
   }
 
@@ -211,11 +213,15 @@ button:hover {
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   body {
-    padding: 1rem 3rem;
+    background-color: #f0f4f8;
+    color: #1e3a8a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Quicksand", sans-serif;
   }
 
   header,
-  footer,
   main,
   #lista {
     width: 90% !important;
@@ -223,9 +229,7 @@ button:hover {
   }
 
   footer {
-    margin-top: 2rem;
-    height: auto;
-    padding-bottom: 1rem;
+    width: 90%;
   }
 
   #lista {
