@@ -25,7 +25,6 @@ new Sortable(lista,
       const nuevoOrdenIds = elementosOrdenados.map(elemento => elemento.dataset.id);
       const nuevoArrayOrdenado = nuevoOrdenIds.map(id => listaTareas.find(tarea => tarea.id === id)).filter(tarea => tarea !== undefined);
       listaTareas = nuevoArrayOrdenado;
-      console.log(nuevoArrayOrdenado);
     }
   }
 );
@@ -218,7 +217,6 @@ function editarTareas() {
           eliminarTareas();
           editarTareas();
         } else {
-          console.log(listaTareas);
           alert("Tarea inexistente");
         }
       } else {
